@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Aqsa, My Deepest Apology ❤️</title>
+    <title>For My Dearest Aqsa ❤️</title>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -103,48 +103,29 @@
             width: 260px;
             text-align: center;
             border: 3px solid #ffbecb;
-            cursor: pointer;
         }
 
         .photo-card:hover {
             transform: scale(1.03) translateY(-8px);
         }
 
-        .photo-placeholder {
+        .photo-frame {
             width: 100%;
             height: 240px;
             background: linear-gradient(135deg, #ffe2e9, #ffd0db);
             border-radius: 48px;
+            overflow: hidden;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            color: #b34e62;
-            font-weight: 600;
-            font-size: 1rem;
-            gap: 12px;
-            border: 2px dashed #ff97ab;
-            cursor: pointer;
-            transition: all 0.2s;
-            overflow: hidden;
+            border: 2px solid #ff97ab;
             position: relative;
         }
 
-        .photo-placeholder img {
+        .photo-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 46px;
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .placeholder-text {
-            position: relative;
-            z-index: 1;
-            text-align: center;
         }
 
         .photo-label {
@@ -190,16 +171,6 @@
             background: #ffb7c5;
             color: #742c3b;
             transform: translateY(-3px);
-        }
-
-        .save-btn {
-            background: #ffa5bb !important;
-            box-shadow: 0 8px 0 #8e4a5c !important;
-            font-size: 1.3rem !important;
-        }
-
-        .save-btn:hover {
-            background: #ff8da8 !important;
         }
 
         .ripple {
@@ -276,25 +247,6 @@
             color: #b34157;
         }
 
-        .save-instruction {
-            background: #ffe4b5;
-            padding: 12px 20px;
-            border-radius: 50px;
-            text-align: center;
-            margin: 10px auto 20px;
-            font-size: 1rem;
-            color: #b34e62;
-            font-weight: bold;
-            width: fit-content;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.02); background: #ffdca8; }
-            100% { transform: scale(1); }
-        }
-
         @media (max-width: 750px) {
             .container { padding: 20px 18px; }
             h1 { font-size: 2rem; }
@@ -320,40 +272,35 @@
         <div class="heart-line">❤️ ❤️ ❤️</div>
     </div>
 
-    <!-- PHOTO GALLERY - Click any box to add your photos -->
-    <div class="photo-gallery" id="photoGallery">
-        <div class="photo-card" data-idx="0">
-            <div class="photo-placeholder" id="placeholder0">
-                <span class="placeholder-text">🖼️ + 📸 <br> Click to add our photo<br><span style="font-size:12px;">(You & Aqsa)</span></span>
+    <!-- PHOTO GALLERY - Your photos will appear here -->
+    <div class="photo-gallery">
+        <div class="photo-card">
+            <div class="photo-frame">
+                <img id="photo1" src="photo1.jpg" alt="Our beautiful moment" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=text-align:center;padding:40px;color:#b34e62>📸 Photo coming soon<br>Add photo1.jpg to GitHub</div>'">
             </div>
             <div class="photo-label">✨ Us - Beautiful Moment ✨</div>
         </div>
-        <div class="photo-card" data-idx="1">
-            <div class="photo-placeholder" id="placeholder1">
-                <span class="placeholder-text">🥰 + 💖 <br> Click to add our photo</span>
+        <div class="photo-card">
+            <div class="photo-frame">
+                <img id="photo2" src="photo2.jpg" alt="Together is beautiful" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=text-align:center;padding:40px;color:#b34e62>📸 Photo coming soon<br>Add photo2.jpg to GitHub</div>'">
             </div>
             <div class="photo-label">💑 Together is beautiful</div>
         </div>
-        <div class="photo-card" data-idx="2">
-            <div class="photo-placeholder" id="placeholder2">
-                <span class="placeholder-text">🐻‍❄️💕 cute moment <br> Click to add</span>
+        <div class="photo-card">
+            <div class="photo-frame">
+                <img id="photo3" src="photo3.jpg" alt="Love & Laughter" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=text-align:center;padding:40px;color:#b34e62>📸 Photo coming soon<br>Add photo3.jpg to GitHub</div>'">
             </div>
             <div class="photo-label">🐣 Love & Laughter</div>
         </div>
-        <div class="photo-card" data-idx="3">
-            <div class="photo-placeholder" id="placeholder3">
-                <span class="placeholder-text">🌸 Aqsa's smile <br> Click to add</span>
+        <div class="photo-card">
+            <div class="photo-frame">
+                <img id="photo4" src="photo4.jpg" alt="My sunshine Aqsa" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=text-align:center;padding:40px;color:#b34e62>📸 Photo coming soon<br>Add photo4.jpg to GitHub</div>'">
             </div>
             <div class="photo-label">🌷 My sunshine Aqsa 🌷</div>
         </div>
     </div>
 
-    <!-- IMPORTANT: Save instruction box -->
-    <div class="save-instruction" id="saveHint">
-        ⭐ IMPORTANT: After adding your photos, click the PINK "SAVE MY PHOTOS" button below! ⭐
-    </div>
-
-    <!-- BUTTONS including the SAVE button -->
+    <!-- ALL BUTTONS WITH ANIMATIONS -->
     <div class="btn-group">
         <button class="cute-btn" id="forgiveBtn">💖 Forgive Me? 💖</button>
         <button class="cute-btn" id="hugBtn">🐻 Send Virtual Hug 🐻</button>
@@ -361,7 +308,6 @@
         <button class="cute-btn" id="sparkleBtn">✨ Make It Sparkle ✨</button>
         <button class="cute-btn" id="heartRainBtn">💗 Heart Rain 💗</button>
         <button class="cute-btn" id="promiseBtn">📜 Forever Promise 📜</button>
-        <button class="cute-btn save-btn" id="saveBtn">💾💾 SAVE MY PHOTOS PERMANENTLY 💾💾</button>
     </div>
 
     <div class="special-message" id="specialMessage">
@@ -382,125 +328,7 @@
 </div>
 
 <script>
-    // ========== THIS CODE SAVES YOUR PHOTOS FOREVER ==========
-    
-    // When page loads, automatically show any saved photos
-    function loadSavedPhotos() {
-        console.log("Loading saved photos...");
-        for (let i = 0; i < 4; i++) {
-            const savedPhoto = localStorage.getItem(`aqsa_photo_${i}`);
-            if (savedPhoto && savedPhoto.startsWith('data:image')) {
-                const placeholder = document.getElementById(`placeholder${i}`);
-                if (placeholder) {
-                    // Clear the placeholder
-                    placeholder.innerHTML = '';
-                    // Create and add the image
-                    const img = document.createElement('img');
-                    img.src = savedPhoto;
-                    img.style.width = '100%';
-                    img.style.height = '100%';
-                    img.style.objectFit = 'cover';
-                    img.style.borderRadius = '46px';
-                    img.style.position = 'absolute';
-                    img.style.top = '0';
-                    img.style.left = '0';
-                    placeholder.appendChild(img);
-                    placeholder.style.background = 'transparent';
-                    placeholder.style.border = 'none';
-                }
-            }
-        }
-    }
-
-    // Setup clicking on photo boxes to add new photos
-    function setupImageUploads() {
-        for (let i = 0; i < 4; i++) {
-            const placeholder = document.getElementById(`placeholder${i}`);
-            if (placeholder) {
-                placeholder.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    const fileInput = document.createElement('input');
-                    fileInput.type = 'file';
-                    fileInput.accept = 'image/*';
-                    fileInput.onchange = (event) => {
-                        const file = event.target.files[0];
-                        if (file) {
-                            const reader = new FileReader();
-                            reader.onload = (ev) => {
-                                const imgUrl = ev.target.result;
-                                
-                                // Show image immediately
-                                placeholder.innerHTML = '';
-                                const img = document.createElement('img');
-                                img.src = imgUrl;
-                                img.style.width = '100%';
-                                img.style.height = '100%';
-                                img.style.objectFit = 'cover';
-                                img.style.borderRadius = '46px';
-                                img.style.position = 'absolute';
-                                img.style.top = '0';
-                                img.style.left = '0';
-                                placeholder.appendChild(img);
-                                placeholder.style.background = 'transparent';
-                                placeholder.style.border = 'none';
-                                
-                                // Store temporarily
-                                window.tempImages = window.tempImages || [];
-                                window.tempImages[i] = imgUrl;
-                                
-                                showFloatingMessage('📸 Photo added! Now click "SAVE MY PHOTOS" to keep it forever! 💕', 2500);
-                            };
-                            reader.readAsDataURL(file);
-                        }
-                    };
-                    fileInput.click();
-                });
-            }
-        }
-    }
-
-    // SAVE BUTTON - This permanently stores your photos
-    document.getElementById('saveBtn')?.addEventListener('click', (e) => {
-        addRippleEffect(e, e.currentTarget);
-        
-        let savedCount = 0;
-        
-        // Go through all 4 photo spots
-        for (let i = 0; i < 4; i++) {
-            const placeholder = document.getElementById(`placeholder${i}`);
-            const img = placeholder?.querySelector('img');
-            
-            if (img && img.src && img.src.startsWith('data:image')) {
-                // Save to browser's permanent storage
-                localStorage.setItem(`aqsa_photo_${i}`, img.src);
-                savedCount++;
-                console.log(`Saved photo ${i}`);
-            }
-        }
-        
-        // Show success message
-        if (savedCount > 0) {
-            showFloatingMessage(`✅ ${savedCount} photo(s) SAVED FOREVER! Even if you close the browser and come back tomorrow, they'll be here! 🎉💾`, 4000);
-            
-            // Update the instruction box to show success
-            const hint = document.getElementById('saveHint');
-            if (hint) {
-                hint.style.background = '#c8e6c9';
-                hint.style.color = '#2e7d32';
-                hint.innerHTML = '✅✅ PERFECT! Your photos are NOW SAVED FOREVER! Even after closing the browser, they will appear! ✅✅';
-                setTimeout(() => {
-                    hint.style.background = '#ffe4b5';
-                    hint.innerHTML = '⭐ Your photos are saved! They will appear every time you visit this website! ⭐';
-                }, 5000);
-            }
-        } else {
-            showFloatingMessage('⚠️ No photos found to save. Please click on the gray boxes and add photos first! 📸', 3000);
-        }
-        
-        createFloatingEmojiAt('💾✅', e.clientX, e.clientY);
-    });
-
-    // ========== ANIMATION FUNCTIONS ==========
+    // ========== ALL ANIMATIONS ==========
     
     function createFloatingEmojiAt(emoji, x, y) {
         const floating = document.createElement('div');
@@ -572,17 +400,23 @@
         }
     }
 
-    // ========== BUTTON EVENT HANDLERS ==========
+    // ========== BUTTON CLICK ANIMATIONS ==========
     
     document.getElementById('forgiveBtn')?.addEventListener('click', (e) => {
         addRippleEffect(e, e.currentTarget);
         createFloatingEmojiAt('🥺🙏💖', e.clientX, e.clientY);
+        createFloatingEmojiAt('😢💕', e.clientX + 30, e.clientY - 20);
         showFloatingMessage("Aqsa, I'm begging for your forgiveness with all my soul. I love you beyond words! 💘", 2500);
+        const apologyDiv = document.querySelector('.apology-text');
+        apologyDiv.style.transform = 'scale(1.02)';
+        setTimeout(() => apologyDiv.style.transform = '', 400);
     });
 
     document.getElementById('hugBtn')?.addEventListener('click', (e) => {
         addRippleEffect(e, e.currentTarget);
         createFloatingEmojiAt('🐻‍❄️🤗', e.clientX, e.clientY);
+        createFloatingEmojiAt('💗', e.clientX - 20, e.clientY);
+        createFloatingEmojiAt('🤗', e.clientX + 20, e.clientY);
         showFloatingMessage("Virtual hug from my heart to yours! 🤗 I'm holding you close, Aqsa. I'm so sorry.", 2300);
     });
 
@@ -611,18 +445,14 @@
     document.getElementById('promiseBtn')?.addEventListener('click', (e) => {
         addRippleEffect(e, e.currentTarget);
         createFloatingEmojiAt('📜❤️‍🩹', e.clientX, e.clientY);
+        createFloatingEmojiAt('💍💕', e.clientX + 40, e.clientY - 30);
         showFloatingMessage("I PROMISE Aqsa: I will heal your heart, be better, and make everything right. You are my forever. 🙌❤️", 3000);
+        const msgDiv = document.getElementById('specialMessage');
+        msgDiv.style.transform = 'scale(1.03)';
+        setTimeout(() => msgDiv.style.transform = '', 500);
     });
 
-    // ========== INITIALIZE EVERYTHING ==========
-    
-    // Load any saved photos first
-    loadSavedPhotos();
-    
-    // Setup the photo upload clicks
-    setupImageUploads();
-    
-    // Background floating hearts
+    // ========== BACKGROUND FLOATING HEARTS ==========
     setInterval(() => {
         const heartEmojis = ['❤️', '💖', '🌸', '🐣', '💞', '🐇', '💗', '🌷'];
         const heart = document.createElement('div');
@@ -635,7 +465,13 @@
         setTimeout(() => heart.remove(), 7000);
     }, 3000);
 
-    console.log('✅ Website ready! Add your photos, then click the PINK SAVE button to keep them forever!');
+    // Click anywhere for tiny heart effect
+    document.body.addEventListener('click', (e) => {
+        if (e.target.closest('.cute-btn')) return;
+        createFloatingEmojiAt('💞', e.clientX, e.clientY);
+    });
+
+    console.log('✅ Website ready! Your photos should load automatically from GitHub!');
 </script>
 </body>
 </html>
